@@ -11,13 +11,16 @@ func Accueil(w http.ResponseWriter, r *http.Request) {
 }
 
 func AddUser(w http.ResponseWriter, r *http.Request) {
-
+	tmpl := template.Must(template.ParseFiles("views/addUser.html"))
+	tmpl.Execute(w, nil)
 }
 
 func EditUser(w http.ResponseWriter, r *http.Request) {
-
+	tmpl := template.Must(template.ParseFiles("views/edit.html"))
+	tmpl.Execute(w, nil)
 }
 
 func DeleteUser(w http.ResponseWriter, r *http.Request) {
-
+	tmpl := template.Must(template.ParseFiles("views/delete.html"))
+	tmpl.Execute(w, nil)
 }
